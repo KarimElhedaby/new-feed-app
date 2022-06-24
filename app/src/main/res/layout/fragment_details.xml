@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:padding="@dimen/dp_4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dp_16"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/openWebsiteButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/newFeedImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_180"
+                android:scaleType="centerCrop"
+                tools:src="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/newFeedTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="normal"
+                tools:text="feed title"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newFeedImageView"
+               />
+
+            <TextView
+                android:id="@+id/newFeedAuthorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/newFeedTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/newFeedTitleTextView"
+                tools:text="author name" />
+
+
+            <TextView
+                android:id="@+id/newFeedDescriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="start"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="normal"
+                tools:text="content content content content content"
+                app:layout_constraintStart_toStartOf="@+id/newFeedTitleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/newFeedAuthorTextView"
+                 />
+
+
+            <TextView
+                android:id="@+id/newFeedDateTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_16"
+                android:gravity="end"
+                android:textAllCaps="false"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="normal"
+                tools:text="april 4/3"
+                app:layout_constraintBottom_toBottomOf="@+id/newFeedImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+               />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/openWebsiteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:text="@string/open_website"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/contentLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
