@@ -8,6 +8,7 @@ import com.example.newfeedsapp.databinding.ItemNewFeedBinding
 import com.example.newfeedsapp.domain.model.NewFeed
 import com.newfeeds.core.utils.loadImage
 
+// recycler view to bind articles can find the base recycler component in core module
 class NewFeedAdapter(val itemClick: (NewFeed) -> Unit) : CustomRecyclerViewAdapter<NewFeed, CustomRecyclerViewAdapter.CustomViewHolder<NewFeed>>() {
 
     override fun getLayout(type: Int) = R.layout.item_new_feed
